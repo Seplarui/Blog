@@ -14,3 +14,17 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::group(['prefix'=>'articles'], function() {
+
+    Route::get('view/{articles?}', function($article="Vacio"){
+
+        echo $article;
+
+
+    });
+
+
+
+});
