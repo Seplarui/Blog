@@ -18,13 +18,11 @@ Route::get('/', function () {
 
 Route::group(['prefix'=>'articles'], function() {
 
-    Route::get('view/{articles?}', function($article="Vacio"){
-
-        echo $article;
-
+    Route::get('view/{id}',[
+        //Que controlador va a usar
+        'uses'=>'TestController@view',
+        //nombre de la ruta (no obligatorio)
+        'as'=>'articlesView'
+    ]);
 
     });
-
-
-
-});
