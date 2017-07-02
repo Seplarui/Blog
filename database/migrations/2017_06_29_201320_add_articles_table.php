@@ -10,7 +10,7 @@ class AddArticlesTable extends Migration
      *
      * @return void
      */
-    public function up()
+    public function  up()
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->increments('id');
@@ -27,7 +27,7 @@ class AddArticlesTable extends Migration
 
     /**
      * Reverse the migrations.
-     *
+     *f
      * @return void
      */
     public function down()
