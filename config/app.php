@@ -145,6 +145,13 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * PROVIDE PERSONAL
+         *
+         */
+        Collective\Html\HtmlServiceProvider::class,
+        Cviebrock\EloquentSluggable\SluggableServiceProvider::class,
+
     ],
 
     /*
@@ -195,5 +202,13 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
 
     ],
+
+    /*
+     *
+     * ALIAS PERSONALES
+     */
+
+    'Form' => Collective\Html\FormFacade::class,
+    'Html' => Collective\Html\HtmlFacade::class,
 
 ];
