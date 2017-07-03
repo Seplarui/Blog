@@ -13,13 +13,11 @@ class TestController extends Controller
     public function view($id)
     {
         $article=Article::find($id);
-        $article->each(function($article){
-            $article->category;
+            /*$article->category;
             $article->user;
-            $article->tags;
+            $article->tags;*/
 
-        });
-        dd($article);
+        return view('test.index',['prueba'=>$article]);
     }
 
 }
