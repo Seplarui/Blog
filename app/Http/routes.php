@@ -15,14 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::group(['prefix'=>'admin'], function(){
 
-Route::group(['prefix'=>'articles'], function() {
+    Route::resource('users','UsersController');
 
-    Route::get('view/{id}',[
-        //Que controlador va a usar
-        'uses'=>'TestController@view',
-        //nombre de la ruta (no obligatorio)
-        'as'=>'articlesView'
-    ]);
 
-    });
+
+
+});

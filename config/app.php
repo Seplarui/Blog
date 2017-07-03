@@ -151,6 +151,7 @@ return [
          */
         Collective\Html\HtmlServiceProvider::class,
         Cviebrock\EloquentSluggable\SluggableServiceProvider::class,
+        Illuminate\Html\HtmlServiceProvider::class,
 
     ],
 
@@ -208,7 +209,9 @@ return [
      * ALIAS PERSONALES
      */
 
-    'Form' => Collective\Html\FormFacade::class,
-    'Html' => Collective\Html\HtmlFacade::class,
+    //'Form' => 'Collective\Html\FormFacade',
+    //'Html' => 'Collective\Html\HtmlFacade',
+
+    'Form'=> Illuminate\Html\FormFacade::class,
 
 ];
